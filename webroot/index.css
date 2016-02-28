@@ -1,0 +1,89 @@
+#images img { width: 90%; }
+#textarea { width: 90%; }
+
+.qas input{
+	display: none;
+}
+.qas label{
+	display: block;
+	cursor: pointer;
+	width: 80%;
+	margin: 0;
+	padding: 12px 12px;
+	background: #bdc3c7;
+	color: #555e64;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1;
+	transition: .2s;
+}
+.qas label:first-of-type{
+	border-radius: 3px 0 0 3px;
+}
+.qas label:last-of-type{
+	border-radius: 0 3px 3px 0;
+}
+.qas input[type="radio"]:checked + label {
+	background-color: #a1b91d;
+    border-style: solid;
+    border-color: #f00;
+}
+
+
+
+.send {
+    clear:both;
+}
+.kaitouzumi .mae {
+  float: left;
+  background: #eeeeee;
+  color: #ccc;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+.kaitouzumi .atoA1 {
+  float: left;
+  background: #F6CED8;
+  color: #333;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.kaitouzumi .atoA2 {
+  float: left;
+  background: #A9F5BC;
+  color: #333;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.kaitouzumi .atoA3 {
+  float: left;
+  background: #5882FA;
+  color: #333;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.kaitouzumi .atoA4 {
+  float: left;
+  background: #F2F5A9;
+  color: #333;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5;
+}

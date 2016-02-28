@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+  "connect":"*",
+  "nodemon":"*",
+  "package.json":"*",
+  "serve-static":"*",
+  "websocket":"*"
+  }
+}
