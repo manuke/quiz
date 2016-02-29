@@ -9,10 +9,10 @@ $seikai = array(
     '7'=>"A1",
     '8'=>"A1",
     '9'=>"A1",
-    '10'=>"A1",    
+    '10'=>"A1",
 );
-    
-$result = file_get_contents('result.txt');
+
+$result = file_get_contents('/tmp/result.txt');
 $array = explode("\n", $result);
 $previous = '';
 foreach ($array as $value) {

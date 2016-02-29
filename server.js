@@ -27,7 +27,7 @@ socket.on('request', function(request) {
             var obj = JSON.parse(message.utf8Data);
             if (obj.kind == 'answer') {
                 console.log(obj);
-                fs.appendFileSync("/Users/ka/node/result.txt", message.utf8Data + "\n");
+                fs.appendFileSync("/tmp/result.txt", message.utf8Data + "\n");
                 client.sendUTF(message.utf8Data);
             } else if  (obj.kind == 'question') {
                 // 文字列だったら文字列としてそのまま送信
