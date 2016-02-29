@@ -1,89 +1,64 @@
-#images img { width: 90%; }
-#textarea { width: 90%; }
-
-.qas input{
-	display: none;
-}
-.qas label{
-	display: block;
-	cursor: pointer;
-	width: 80%;
-	margin: 0;
-	padding: 12px 12px;
-	background: #bdc3c7;
-	color: #555e64;
-	font-size: 14px;
-	text-align: center;
-	line-height: 1;
-	transition: .2s;
-}
-.qas label:first-of-type{
-	border-radius: 3px 0 0 3px;
-}
-.qas label:last-of-type{
-	border-radius: 0 3px 3px 0;
-}
-.qas input[type="radio"]:checked + label {
-	background-color: #a1b91d;
-    border-style: solid;
-    border-color: #f00;
+.stage {
+    /* 画面全体を使うための指定 */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    /* 縦方向に4行を配置するための flex 指定 */
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-.send {
-    clear:both;
-}
-.kaitouzumi .mae {
-  float: left;
-  background: #eeeeee;
-  color: #ccc;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.5;
-}
-.kaitouzumi .atoA1 {
-  float: left;
-  background: #F6CED8;
-  color: #333;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.5;
+.header {
+    background: red;
+    /* ヘッダーの高さを25pxで固定するための指定 */
+    height: 25px;
+    flex: none;
 }
 
-.kaitouzumi .atoA2 {
-  float: left;
-  background: #A9F5BC;
-  color: #333;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.5;
+.footer {
+    background: blue;
+    /* フッターの高さを25pxで固定するための指定 */
+    height: 25px;
+    flex: none;
 }
 
-.kaitouzumi .atoA3 {
-  float: left;
-  background: #5882FA;
-  color: #333;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.5;
+.row {
+    /* ヘッダーとフッターを除く高さを、行で等分するための指定 */
+    flex: 1 1 auto;
+    /* 横に並べるための flex 指定 */
+    display: flex;
+    flex-direction: row;
 }
 
-.kaitouzumi .atoA4 {
-  float: left;
-  background: #F2F5A9;
-  color: #333;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.5;
+.row > .item {
+    /* 横に3つ、等間隔で並べるための flex 指定 */
+    flex: 1 1 auto;
+    /* 数字(コンテンツ)をセンタリングするための指定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* フォントを見やすくするための指定 */
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* 以下、各要素を色分けするための指定 */
+.row-1 > .item:nth-child(1) {
+    background: #f99;
+}
+.row-1 > .item:nth-child(2) {
+    background: #9f9;
+}
+.row-1 > .item:nth-child(3) {
+    background: #99f;
+}
+.row-2 > .item:nth-child(1) {
+    background: #c66;
+}
+.row-2 > .item:nth-child(2) {
+    background: #6c6;
+}
+.row-2 > .item:nth-child(3) {
+    background: #66c;
 }
