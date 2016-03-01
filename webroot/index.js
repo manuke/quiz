@@ -83,6 +83,7 @@ socket.addEventListener('message', function(evt) {
 }, false);
 
 $(function() {
+    /*
     $('#qasend').click(function() {
         if (!$('input[name=qa]:checked').val()) {
             alert('selct answer!');
@@ -93,8 +94,30 @@ $(function() {
             lavel = $("label[for='"+idVal+"']").text();
             var question = $("#question").val()
             var qid = $("#qid").val()            
-            $('input[name=qa]').prop("disabled", true);
-            $(this).prop("disabled", true);
+            //$('input[name=qa]').prop("disabled", true);
+            //$(this).prop("disabled", true);
+            var params = getAllUrlParameter();
+            var d = new Date(); // for now
+            var datetext = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+            var obj = {"uid":params.uid,"qid":qid,"time":datetext, "kind":"answer","lavel":lavel,"question":question,"selected":selected};
+            console.log(obj);
+	        socket.send(JSON.stringify(obj));
+        }
+    });
+*/
+
+    $('.qa').change(function() {
+        if (!$('input[name=qa]:checked').val()) {
+            alert('selct answer!');
+        } else {
+            var selected = $('input[name=qa]:checked').val()
+            var lavel = "";
+            var idVal = $("input[name='qa']:checked").attr("id");
+            lavel = $("label[for='"+idVal+"']").text();
+            var question = $("#question").val()
+            var qid = $("#qid").val()            
+            //$('input[name=qa]').prop("disabled", true);
+            //$(this).prop("disabled", true);
             var params = getAllUrlParameter();
             var d = new Date(); // for now
             var datetext = d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();

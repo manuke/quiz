@@ -34,7 +34,7 @@ socket.on('request', function(request) {
 		        client.sendUTF(message.utf8Data);
             }
 		} else if (message.type === 'binary') {
-            console.log("image send");
+		    console.log("image send");
 		    // バイナリだったらバイナリとしてそのまま送信
 		    client.sendBytes(message.binaryData);
 		} else {
