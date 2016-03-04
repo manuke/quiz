@@ -5,21 +5,17 @@
         <title>q&a</title>
     </head>
     <body>
-        <div class="kaitouzumi">
-                <p id="kaitouzumi1" class="mae">1</p>
-                <p id="kaitouzumi2" class="mae">2</p>
-                <p id="kaitouzumi3" class="mae">3</p>
-                <p id="kaitouzumi4" class="mae">4</p>
-                <p id="kaitouzumi5" class="mae">5</p>
-                <p id="kaitouzumi6" class="mae">6</p>
-
-		<p id="countdown" class="countdown"></p>
-        </div>
       <div class="send">
       <textarea id='textarea'>{"qid":"1", "kind":"question","question":"mondai1!","A1":"kaiou1","A2":"kaiou2","A3":"kaiou3","A4":"kaiou4"}</textarea>
-        <input id="sendText" type="button" value="文字列を送る" />
+      <input id="sendText" type="button" value="文字列を送る" />
+        <input id="sendCountdown" type="button" value="カウントダウン" />      
         <input id="image" name="image" type="file" style="width:100%;"/>
       </div>
+
+
+
+
+	<div id="mondaiarea">
         <!-- 文字列受信ログ -->
         <div id="messages">
 	        <p></p>
@@ -53,7 +49,24 @@
             <!-- <input type="button" id="qasend" value="回答送信"> -->
         </p>
         </div>
-        
+        </div>
+
+
+
+         <div id="user_show">
+
+	    <div class="kaitouzumi">
+                <p id="kaitouzumi1" class="mae">1</p>
+                <p id="kaitouzumi2" class="mae">2</p>
+                <p id="kaitouzumi3" class="mae">3</p>
+                <p id="kaitouzumi4" class="mae">4</p>
+                <p id="kaitouzumi5" class="mae">5</p>
+                <p id="kaitouzumi6" class="mae">6</p>
+        </div>
+
+      </div>
+
+	 
         <link href="quiz.css" rel="stylesheet" type="text/css" />
         <input type="hidden" id="uid" name="uid">
         <input type="hidden" id="qid" name="qid">

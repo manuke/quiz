@@ -1,5 +1,5 @@
-#images img { width: 90%; }
-#textarea { width: 90%; }
+#images img { width: 100%; }
+#textarea { width: 100%; }
 
 .qas input{
 	display: none;
@@ -7,14 +7,12 @@
 .qas label{
 	display: block;
 	cursor: pointer;
-	width: 80%;
-	margin: 0;
+	width: 100%;
+	margin: 30px 0px;
 	padding: 12px 12px;
-	background: #bdc3c7;
-	color: #555e64;
 	font-size: 14px;
 	text-align: center;
-	line-height: 1;
+	line-height: 2;
 	transition: .2s;
 }
 .qas label:first-of-type{
@@ -29,11 +27,40 @@
     border-color: #f00;
 }
 
+.qas {
+    clear:both;
+    background-image: url("countdown.gif");
+    background-repeat:no-repeat;
+    background-position:center;
+}
 
+.mondai{
+        clear:both;
+}
 
 .send {
     clear:both;
 }
+
+
+.mondai {
+
+}
+
+.countdown {
+  float: left;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
+  text-align: center;
+}
+.countdown img{
+    width: 4em;
+}
+
+
 .kaitouzumi .mae {
   float: left;
   background: #eeeeee;
@@ -41,8 +68,11 @@
   width: 3em;
   height: 3em;
   border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
   text-align: center;
   line-height: 1.5;
+  font-size: large;
 }
 .kaitouzumi .atoA1 {
   float: left;
@@ -50,9 +80,14 @@
   color: #333;
   width: 3em;
   height: 3em;
-  border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
   text-align: center;
   line-height: 1.5;
+  font-size: large;
+  border-radius: 50%;
+
+
 }
 
 .kaitouzumi .atoA2 {
@@ -61,9 +96,14 @@
   color: #333;
   width: 3em;
   height: 3em;
-  border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
   text-align: center;
   line-height: 1.5;
+  font-size: large;
+  border-radius: 50%;
+
+
 }
 
 .kaitouzumi .atoA3 {
@@ -72,9 +112,14 @@
   color: #333;
   width: 3em;
   height: 3em;
-  border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
   text-align: center;
   line-height: 1.5;
+  font-size: large;
+  border-radius: 50%;
+
+
 }
 
 .kaitouzumi .atoA4 {
@@ -83,7 +128,12 @@
   color: #333;
   width: 3em;
   height: 3em;
-  border-radius: 50%;
+  vertical-align: bottom;
+  display:table-cell;
   text-align: center;
   line-height: 1.5;
+  font-size: large;
+  border-radius: 50%;
+
+
 }
