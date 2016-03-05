@@ -1,26 +1,25 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <title>q&a</title>
     </head>
     <body>
-            <div class="qa">
-		    <div class="stage">
-			    <div class="header"></div>
-			    <div class="row row-1">
-				    <div class="item"><a href="quiz.html?uid=1">1</a></div>
-				    <div class="item"><a href="quiz.html?uid=2">2</a></div>
-				    <div class="item"><a href="quiz.html?uid=3">3</a></div>
-			    </div>
-			    <div class="row row-2">
-				    <div class="item"><a href="quiz.html?uid=4">4</a></div>
-				    <div class="item"><a href="quiz.html?uid=5">5</a></div>
-				    <div class="item"><a href="quiz.html?uid=6">6</a></div>
-			    </div>
-			    <div class="footer"></div>
-		    </div>
-        </div>
-        <link href="index.css" rel="stylesheet" type="text/css" />
+
+	    <div id="mondaiarea">
+            <h1><div id="messages">結婚おめでとう!</div></h1>
+        <!-- 文字列受信ログ -->
+        <!-- 画像受信ログ -->
+        <div id="images" align="center"><p></p></div>
+   </div>
+	 
+        <link href="quiz.css" rel="stylesheet" type="text/css" />
+        <input type="hidden" id="uid" name="uid">
+        <input type="hidden" id="qid" name="qid">
+        <input type="hidden" id="question" name="question">
+        <input type="hidden" id="answer" name="answer">       
     </body>
+    <script type="text/javascript" src="jquery.js"></script>        
+    <script type="text/javascript" src="quiz.js"></script>
+    <script type="text/javascript" src="send.js"></script>
 </html>

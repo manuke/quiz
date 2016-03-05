@@ -58,7 +58,10 @@ socket.addEventListener('message', function(evt) {
             }
 	        var oldElement = doc.getElementById('messages').lastChild;
 	        console.log(oldElement);
-            doc.getElementById('messages').replaceChild(p, oldElement);
+            //doc.getElementById('messages').replaceChild(p, oldElement);
+            doc.getElementById('messages').removeChild(oldElement);
+            doc.getElementById('messages').innerHTML = "<p>" + data.question + "</p>";
+            
             $("#label1").text(data.A1);
             $("#label2").text(data.A2);
             $("#label3").text(data.A3);
@@ -66,9 +69,19 @@ socket.addEventListener('message', function(evt) {
             $("#question").val(data.question);
             $("#qid").val(data.qid);            
             console.log("js add text");
+            $('.qas').css('background-image', "none");
+
+
+            // del image
+            var dummy_p = doc.createElement('p');
+	        var oldElement = doc.getElementById('images').lastChild;
+            doc.getElementById('images').replaceChild(dummy_p, oldElement);
         } else if (data.kind == 'countdown') {
             console.log("COUNTDOWN GIF START!");
-            $('.qas').css('background-image', 'url(countdown.gif)');
+            $('.qas').css('background-image', "url(countdown.gif?" + (new Date).getTime() + ")");
+        } else if (data.kind == 'url') {
+            console.log("URL REDIRECT!");
+            location.href = data.url;
         } else {
             console.log("mondai json error");
         }
@@ -130,7 +143,3 @@ $(function() {
         }
     });
 });
-
-
-
-

@@ -11,7 +11,7 @@ var WebSocketServer = require('websocket').server;
 var clients = [];
 var socket = new WebSocketServer({
     httpServer: httpServer,
-    maxReceivedFrameSize: '1MiB',
+    maxReceivedFrameSize: '5MiB',
   autoAcceptConnections: false
 });
 
@@ -32,6 +32,10 @@ socket.on('request', function(request) {
             } else if  (obj.kind == 'question') {
                 // 文字列だったら文字列としてそのまま送信
 		        client.sendUTF(message.utf8Data);
+            } else if (obj.kind == 'countdown') {
+                client.sendUTF(message.utf8Data);
+            } else if (obj.kind == 'url') {
+                client.sendUTF(message.utf8Data);
             }
 		} else if (message.type === 'binary') {
 		    console.log("image send");

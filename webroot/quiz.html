@@ -1,15 +1,18 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <title>q&a</title>
     </head>
     <body>
       <div class="send">
-      <textarea id='textarea'>{"qid":"1", "kind":"question","question":"mondai1!","A1":"kaiou1","A2":"kaiou2","A3":"kaiou3","A4":"kaiou4"}</textarea>
+      <textarea id='textarea'>{"qid":"1", "kind":"question","question":"mon<br>dai1!","A1":"kaiou1","A2":"kaiou2","A3":"kaiou3","A4":"kaiou4"}</textarea>
       <input id="sendText" type="button" value="文字列を送る" />
         <input id="sendCountdown" type="button" value="カウントダウン" />      
         <input id="image" name="image" type="file" style="width:100%;"/>
+        <br>
+        <input id="url_text" name="url_text" type="text" value="table.html" style="width:80%;"/>
+        <input id="sendUrl" type="button" value="URLを送る" />
       </div>
 
 
@@ -17,32 +20,28 @@
 
 	<div id="mondaiarea">
         <!-- 文字列受信ログ -->
-        <div id="messages">
-	        <p></p>
-	    </div>
+        <div id="messages"><p>practice question.<br> push answer button!</p></div>
         
         <!-- 画像受信ログ -->
-        <div id="images" align="center">
-	        <p></p>
-	    </div>
+        <div id="images" align="center"><p></p></div>
 
         <div class="mondai">
         <div class="qas">
             <p>
                 <input class="qa" type="radio" name="qa" id="qa1" value="A1">
-                <label for="qa1" id="label1" style="background-color:#F6CED8;">1</label>
+                <label for="qa1" id="label1" style="background-color:#F6CED8;">answer1</label>
             </p>
                         <p>
             <input class="qa" type="radio" name="qa" id="qa2" value="A2">
-            <label for="qa2" id="label2" style="background-color:#A9F5BC;">2</label>
+            <label for="qa2" id="label2" style="background-color:#A9F5BC;">answer2</label>
                         </p>
                                                 <p>
             <input class="qa" type="radio" name="qa" id="qa3" value="A3">
-            <label for="qa3" id="label3" style="background-color:#78A2FA;">3</label>
+            <label for="qa3" id="label3" style="background-color:#78A2FA;">answer3</label>
                                                 </p>
                                                 <p>
             <input class="qa" type="radio" name="qa" id="qa4" value="A4">
-            <label for="qa4" id="label4" style="background-color:#F2F5A9;">4</label>
+            <label for="qa4" id="label4" style="background-color:#F2F5A9;">answer4</label>
                                                 </p>
         </div>
         <p>
@@ -62,6 +61,7 @@
                 <p id="kaitouzumi4" class="mae">4</p>
                 <p id="kaitouzumi5" class="mae">5</p>
                 <p id="kaitouzumi6" class="mae">6</p>
+                <p id="kaitouzumi7" class="mae">7</p>                                
         </div>
 
       </div>
@@ -74,6 +74,6 @@
         <input type="hidden" id="answer" name="answer">       
     </body>
     <script type="text/javascript" src="jquery.js"></script>        
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="quiz.js"></script>
     <script type="text/javascript" src="send.js"></script>
 </html>
