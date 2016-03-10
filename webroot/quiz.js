@@ -64,8 +64,21 @@ socket.addEventListener('message', function(evt) {
             
             $("#label1").text(data.A1);
             $("#label2").text(data.A2);
-            $("#label3").text(data.A3);
-            $("#label4").text(data.A4);
+
+	    if (data.A3) {
+		$('.a3_box').show();
+		$("#label3").text(data.A3);
+	    } else {
+		$('.a3_box').hide();
+	    }
+
+	    if (data.A4) {
+		$('.a4_box').show();
+		$("#label4").text(data.A4);
+	    } else {
+		$('.a4_box').hide();
+	    }
+
             $("#question").val(data.question);
             $("#qid").val(data.qid);            
             console.log("js add text");

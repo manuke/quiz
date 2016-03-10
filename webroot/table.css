@@ -59,3 +59,25 @@ body {
 .row-1 > .item:nth-child(7) {
     background: #ccc;
 }
+
+.row-1 > .item:nth-child(8) {
+    background: #f99;
+}
+.row-1 > .item:nth-child(9) {
+    background: #9f9;
+}
+.row-1 > .item:nth-child(10) {
+    background: #99f;
+}
+.row-1 > .item:nth-child(11) {
+    background: #c66;
+}
+.row-1 > .item:nth-child(12) {
+    background: #6c6;
+}
+.row-1 > .item:nth-child(13) {
+    background: #66c;
+}
+.row-1 > .item:nth-child(14) {
+    background: #ccc;
+}
