@@ -19,16 +19,49 @@ $previous = '';
 foreach ($array as $value) {
     if ($value) {
         $decoded = json_decode($value, true);
-        $decodeds[$decoded['uid']][$decoded['qid']] = $decoded;
-        $kekka[$decoded['uid']] = 0;
-        $previous = $value;
-    }
-}
-foreach ($decodeds as $uid => $value) {
-    foreach ($value as $qid => $decoded) {
-        if ($seikai[$qid] == $decoded['selected']) {
-            $kekka[$uid]++;
+        if (isset($decoded['uid']) && $decoded['uid']) {
+            if ($decoded['qid']) {
+                $decodeds[$decoded['qid']][$decoded['uid']] = $decoded;
+                $kekka[$decoded['uid']] = 0;
+                $previous = $value;
+            }
         }
     }
 }
+
+$user_count = count($kekka);
+
+foreach ($decodeds as $qid => $value) {
+    foreach ($value as $uid => $decoded) {
+        $seikais = array();
+        if ($seikai[$qid] == $decoded['selected']) {
+            $kekka[$uid]++;
+            $seikais[$decoded['now']] = $decoded;
+        }
+    }
+    ksort($seikais);
+
+    var_dump("Q$qid:" . $decoded["question"]);
+    $seikai_count = count($seikais);
+    if ($seikai_count ) {
+        $amari = $user_count % $seikai_count;
+        $wari = $user_count / $seikai_count;
+        foreach ($seikais as $saisyu) {
+            $point = $wari;
+            if ($amari > 0) {
+                $point = $wari + 1;
+                $amari--;
+            } else {
+                $point = $wari;
+            }
+            $saisyu['point'] = $point;
+            $saisyus[] = $saisyu;
+        }
+        var_dump($saisyus);
+    } else {
+        var_dump("no answer");
+    }
+}
+
+
 var_dump($kekka);
