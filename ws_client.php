@@ -3,7 +3,9 @@ require('vendor/autoload.php');
 use WebSocket\Client;
 $client = new Client("ws://127.0.0.1:8081/");
 
-
+$file = file_get_contents("tensu.png");
+$client->send($file, "binary");
+exit;
 
 $arrays =
     array(
@@ -39,7 +41,7 @@ $arrays =
         ),
     );
 
-send($arrays, 2);
+send($arrays, 0);
 exit;
 function send($arrays, $id)
 {
@@ -98,3 +100,20 @@ for ($i=0 ; $i<100000 ; $i++) {
         sleep(3);
     }
 }
+
+/*
+foreach (range(1,6) as $kazu) {
+    $json = json_encode(array(
+        "qid"=>"",
+        "time"=>"12:20:16",
+        "question"=>"q",
+        "kind"=>'answer',
+        "uid"=>$kazu,
+        "selected"=>"A1",
+    ));
+    var_dump($json);
+}
+
+$client->send($json);
+exit;
+*/
